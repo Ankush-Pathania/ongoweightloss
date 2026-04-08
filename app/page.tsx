@@ -1,21 +1,25 @@
-import Benefits from "./components/landing page/benifits";
-import CTA from "./components/landing page/cta";
-import Doctors from "./components/landing page/doctors";
-import FAQ from "./components/landing page/faq";
+// import Benefits from "./components/landing page/benifits";
+// import CTA from "./components/landing page/cta";
+// import Doctors from "./components/landing page/doctors";
+// import FAQ from "./components/landing page/faq";
 import Hero from "./components/landing page/hero";
 import HowItWorks from "./components/landing page/howitworks";
 import Medications from "./components/landing page/medications";
+import Scrollingbar from "./components/landing page/scrollingbar";
+import Glplanding from "./components/landing page/GlpLanding";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Benefits />
+      <Scrollingbar />
+      <Glplanding />
+      {/* <Benefits /> */}
       <HowItWorks />
       <Medications />
-      <Doctors />
-      <FAQ />
-      <CTA />
+      {/* <Doctors /> */}
+      {/* <FAQ /> */}
+      {/* <CTA /> */}
     </>
   );
 }
