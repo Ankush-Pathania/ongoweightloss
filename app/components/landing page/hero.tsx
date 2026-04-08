@@ -2,23 +2,23 @@ export default function Hero() {
   const cards = [
   {
     title: "Weight Loss",
-    defaultImg: "assets/fat-woman.webp",
-    hoverImg: "assets/slim-girl.webp",
+    defaultImg: "assets/fat-woman 1.png",
+    hoverImg: "assets/slim-girl 1.png",
   },
   {
     title: "Peptides & Longevity",
-    defaultImg: "assets/fat-woman.webp",
-    hoverImg: "assets/slim-girl.webp",
+    defaultImg: "assets/fat-woman 1.png",
+    hoverImg: "assets/slim-girl 1.png",
   },
   {
     title: "Men’s Health",
-    defaultImg: "assets/fat-woman.webp",
-    hoverImg: "assets/slim-girl.webp",
+    defaultImg: "assets/fat-woman 1.png",
+    hoverImg: "assets/slim-girl 1.png",
   },
   {
     title: "Women’s Health",
-    defaultImg: "assets/fat-woman.webp",
-    hoverImg: "assets/slim-girl.webp",
+    defaultImg: "assets/fat-woman 1.png",
+    hoverImg: "assets/slim-girl 1.png",
   },
 ];
   return (
@@ -43,7 +43,9 @@ export default function Hero() {
      <div className="card-wrapper">
   {cards.map((card, index) => (
     <div className="card" key={index}>
-      
+       <h3>
+        {card.title} <span>→</span>
+      </h3>
       <div className="card-image">
         <img
           src={card.defaultImg}
@@ -57,9 +59,7 @@ export default function Hero() {
         />
       </div>
 
-      <h3>
-        {card.title} <span>→</span>
-      </h3>
+     
     </div>
   ))}
 </div>

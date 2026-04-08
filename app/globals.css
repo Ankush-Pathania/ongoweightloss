@@ -271,7 +271,6 @@ body::before {
 
 /* IMAGE WRAPPER */
 .card-image {
-  position: relative;
   height: 180px;
   display: flex;
   align-items: center;
@@ -285,6 +284,7 @@ body::before {
   object-fit: contain;
   transition: all 0.4s ease;
   z-index: 2;
+  bottom: 0;
 }
 
 /* DEFAULT IMAGE */
