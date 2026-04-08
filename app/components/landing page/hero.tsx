@@ -1,25 +1,26 @@
 export default function Hero() {
   const cards = [
-    {
-      title: "Weight Loss",
-      img: "assets/liraglutide.webp",
-    },
-    {
-      title: "Peptides & Longevity",
-            img: "assets/liraglutide.webp",
-
-    },
-    {
-      title: "Men’s Health",
-            img: "assets/liraglutide.webp",
-
-    },
-    {
-      title: "Women’s Health",
-            img: "assets/liraglutide.webp",
-
-    },
-  ];
+  {
+    title: "Weight Loss",
+    defaultImg: "assets/fat-woman.webp",
+    hoverImg: "assets/slim-girl.webp",
+  },
+  {
+    title: "Peptides & Longevity",
+    defaultImg: "assets/fat-woman.webp",
+    hoverImg: "assets/slim-girl.webp",
+  },
+  {
+    title: "Men’s Health",
+    defaultImg: "assets/fat-woman.webp",
+    hoverImg: "assets/slim-girl.webp",
+  },
+  {
+    title: "Women’s Health",
+    defaultImg: "assets/fat-woman.webp",
+    hoverImg: "assets/slim-girl.webp",
+  },
+];
   return (
     <section className="hero" id="home">
       <div className="bg_big_text">
@@ -39,16 +40,29 @@ export default function Hero() {
         providers. No waiting rooms. No unnecessary steps. Just care that works.
       </p>
 
-      <div className="card-wrapper">
-        {cards.map((card, index) => (
-          <div className="card" key={index}>
-            <img src={card.img} alt={card.title} />
-            <h3>
-              {card.title} <span>→</span>
-            </h3>
-          </div>
-        ))}
+     <div className="card-wrapper">
+  {cards.map((card, index) => (
+    <div className="card" key={index}>
+      
+      <div className="card-image">
+        <img
+          src={card.defaultImg}
+          alt={card.title}
+          className="img-default"
+        />
+        <img
+          src={card.hoverImg}
+          alt={card.title}
+          className="img-hover"
+        />
       </div>
+
+      <h3>
+        {card.title} <span>→</span>
+      </h3>
+    </div>
+  ))}
+</div>
     </section>
   );
 }

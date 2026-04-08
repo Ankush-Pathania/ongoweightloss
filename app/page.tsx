@@ -15,8 +15,8 @@ export default function Home() {
       <Scrollingbar />
       <Glplanding />
       {/* <Benefits /> */}
-      <HowItWorks />
       <Medications />
+      <HowItWorks />
       {/* <Doctors /> */}
       {/* <FAQ /> */}
       {/* <CTA /> */}

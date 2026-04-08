@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export default function MedicationsSection() {
-  const [activeTab, setActiveTab] = useState("weight");
+  const [activeTab, setActiveTab] = useState("all");
 
  const handleTabClick = (tab: string) => {
   setActiveTab(tab);
@@ -40,6 +40,12 @@ const getVisibility = (category: string) => {
 
         {/* Tabs */}
         <div className="tab-bar reveal">
+           <button
+            className={`tab-btn ${activeTab === "all" ? "active" : ""}`}
+            onClick={() => handleTabClick("all")}
+          >
+            All Medications
+          </button>
           <button
             className={`tab-btn ${activeTab === "weight" ? "active" : ""}`}
             onClick={() => handleTabClick("weight")}
@@ -52,12 +58,7 @@ const getVisibility = (category: string) => {
           >
             Diabetes Care
           </button>
-          <button
-            className={`tab-btn ${activeTab === "all" ? "active" : ""}`}
-            onClick={() => handleTabClick("all")}
-          >
-            All Medications
-          </button>
+         
         </div>
 
         {/* Cards */}

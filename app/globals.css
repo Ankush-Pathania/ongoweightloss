@@ -22,7 +22,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "Plus Jakarta Sans", sans-serif;
+
 }
 
 :root {
@@ -195,7 +197,7 @@ body::before {
   color: var(--warm-white);
   text-align: center;
   padding: 140px 20px 50px;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .bg_big_text {
      color: #ffffff1a;
@@ -239,40 +241,116 @@ body::before {
 
 /* CARD WRAPPER */
 .card-wrapper {
-  background: #fffcf92e;
+  background: rgba(255, 252, 249, 0.2);
   border-radius: 22px;
   max-width: 1100px;
   margin: 60px auto 0;
   padding: 20px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  overflow-x: auto;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
 /* CARD */
 .card {
-  flex: 1;
-  min-width: 220px;
   background: var(--sand-light);
-  border-radius: 16px;
-  padding: 18px;
-  transition: transform 0.3s ease;
+  border-radius: 18px;
+  padding: 20px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border: 1px solid var(--border);
 }
 
+/* Hover lift */
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  background: var(--warm-white);
 }
 
-/* IMAGE */
-.card img {
-  width: 100%;
-  height: 140px;
+/* IMAGE WRAPPER */
+.card-image {
+  position: relative;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* IMAGES */
+.card-image img {
+  position: absolute;
+  height: 100%;
   object-fit: contain;
-  margin-bottom: 15px;
+  transition: all 0.4s ease;
+  z-index: 2;
 }
 
+/* DEFAULT IMAGE */
+.img-default {
+  opacity: 1;
+}
+
+/* HOVER IMAGE */
+.img-hover {
+  opacity: 0;
+}
+
+/* 🔥 IMAGE SWAP */
+.card:hover .img-default {
+  opacity: 0;
+}
+
+.card:hover .img-hover {
+  opacity: 1;
+}
+
+/* ✨ GLOW EFFECT (USING YOUR COLORS) */
+.card-image::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(
+    circle,
+    var(--amber-light) 0%,
+    var(--amber) 40%,
+    transparent 70%
+  );
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.4s ease;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* 🔥 SHOW GLOW ON HOVER */
+.card:hover .card-image::before {
+  opacity: 0.6;
+  transform: scale(1.2);
+}
+
+/* TITLE */
+.card h3 {
+  font-size: 16px;
+  color: var(--text-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ARROW */
+.card h3 span {
+  color: var(--terracotta);
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* Arrow move */
+.card:hover h3 span {
+  transform: translateX(5px);
+}
 /* TITLE */
 .card h3 {
   font-size: 15px;
@@ -316,7 +394,6 @@ body::before {
 .scroll-container {
   width: 100%;
   overflow: hidden;
-  background: #f5f5f5;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
   padding: 20px 0;
@@ -358,7 +435,6 @@ body::before {
   max-width: 1100px;
   margin: 0 auto;
   padding: 64px 24px 32px;
-  font-family: Arial, Helvetica, sans-serif;
   color: var(--text-dark);
 }
 
@@ -472,10 +548,12 @@ body::before {
 .wl-image-card {
   border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 3;
   background: var(--sand);
 }
-
+.wl-image-card:last-child {
+  margin-top: 50px;
+}
 .wl-grid-image {
   width: 100%;
   height: 100%;
