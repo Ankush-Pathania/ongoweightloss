@@ -193,10 +193,18 @@ body::before {
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, var(--text-dark), var(--terracotta));
+  /* background: linear-gradient(135deg, var(--amber-pale), var(--terracotta)); */
   color: var(--warm-white);
   text-align: center;
-  padding: 140px 20px 50px;
+  padding: 140px 20px 250px;
+  /* background-image: url('/assets/hero-bg.jfif'); */
+    background-image: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)),
+    url('/assets/hero-bg.jfif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
 }
 .bg_big_text {
      color: #ffffff1a;
@@ -213,6 +221,12 @@ body::before {
   font-size: 14px;
   color: var(--sand-light);
   margin-bottom: 20px;
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid var(--sand-light);
+  border-radius: 999px;
+   box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 /* HEADING */
@@ -275,20 +289,7 @@ body::before {
   width: 100%;
 }
 
-.card:hover {
-  background: radial-gradient(
-      200px circle at var(--x, 50%) var(--y, 50%),
-      rgba(245, 158, 11, 0.9),        /* amber-light */
-      rgba(194, 98, 43, 0.55) 30%,    /* terracotta */
-      rgba(0, 0, 0, 0) 65%
-    ),
-    linear-gradient(
-      135deg,
-      #2a1a08,
-      #120b04
-    );
 
-}
 .top_bar_card {
   position: absolute;
   bottom: 0;
