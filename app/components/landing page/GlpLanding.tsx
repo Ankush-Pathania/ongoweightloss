@@ -10,13 +10,13 @@ const checkItems = [
 
 export default function WeightLossSection() {
   return (
-    <section className="wl-section">
+    <section className="wl-section reveal">
       {/* ── Hero Block ── */}
       <div className="wl-hero">
          {/* Right column */}
-        <div className="wl-hero-right">
-          <p className="wl-eyebrow">Doctor-Guided GLP-1 Care</p>
-          <h1 className="wl-headline">
+        <div className="wl-hero-right reveal">
+          <p className="wl-eyebrow reveal">Doctor-Guided GLP-1 Care</p>
+          <h1 className="wl-headline reveal">
             Weight loss{" "}
             <span className="wl-headline-accent">made easy</span>
             <br />
@@ -24,14 +24,14 @@ export default function WeightLossSection() {
           </h1>
 
           <div className="wl-image-grid">
-            <div className="wl-image-card">
+            <div className="wl-image-card reveal">
               <img
                 src="assets/glp-b.png"
                 alt="Happy patient after weight loss"
                 className="wl-grid-image"
               />
             </div>
-            <div className="wl-image-card">
+            <div className="wl-image-card reveal">
               <img
                 src="assets/glp-a.png"
                 alt="GLP-1 injection demonstration"
@@ -40,7 +40,7 @@ export default function WeightLossSection() {
             </div>
           </div>
 
-          <div className="wl-cta">
+          <div className="wl-cta reveal">
             <h2 className="wl-cta-heading">
               A smarter approach to weight loss, built around you
             </h2>
@@ -54,8 +54,8 @@ export default function WeightLossSection() {
           </div>
         </div>
         {/* Left column */}
-        <div className="wl-hero-left">
-          <div className="wl-product-image-wrap">
+        <div className="wl-hero-left reveal">
+          <div className="wl-product-image-wrap reveal">
             <img
               src="assets/glp-c.png"
               alt="GLP-1 prescription medication"
@@ -63,11 +63,11 @@ export default function WeightLossSection() {
             />
           </div>
 
-          <div className="wl-check-list">
+          <div className="wl-check-list reveal">
             <p className="wl-check-list-title">Everything you need—included:</p>
             <ul className="wl-check-items">
               {checkItems.map((item) => (
-                <li key={item} className="wl-check-item">
+                <li key={item} className="wl-check-item reveal">
                   <span className="wl-check-icon" aria-hidden="true">
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                       <circle cx="9" cy="9" r="9" fill="#2D7A4F" />
@@ -90,50 +90,7 @@ export default function WeightLossSection() {
        
       </div>
 
-      {/* ── Features Strip ── */}
-      {/* <div className="wl-features-strip">
-        <div className="wl-feature-card">
-          <div className="wl-feature-image-wrap">
-            <img
-              src="assets/phone.png"
-              alt="Patient portal app preview"
-              className="wl-feature-image"
-            />
-          </div>
-          <div className="wl-feature-text">
-            <p className="wl-feature-title">
-              Everything,{" "}
-              <span className="wl-feature-accent">all in one place</span>
-            </p>
-            <p className="wl-feature-body">
-              Track your progress, check in with your provider, and manage your
-              care in your all-in-one patient portal.
-            </p>
-          </div>
-        </div>
 
-        <div className="wl-feature-divider" aria-hidden="true" />
-
-        <div className="wl-feature-card">
-          <div className="wl-feature-image-wrap">
-            <img
-              src="assets/phone.png"
-              alt="24/7 medical support"
-              className="wl-feature-image"
-            />
-          </div>
-          <div className="wl-feature-text">
-            <p className="wl-feature-title">
-              Unlimited{" "}
-              <span className="wl-feature-accent">24/7 support</span>
-            </p>
-            <p className="wl-feature-body">
-              Medical support continues throughout your care, whenever you need
-              it.
-            </p>
-          </div>
-        </div>
-      </div> */}
 
       {/* ── Disclaimer ── */}
       <p className="wl-disclaimer">
