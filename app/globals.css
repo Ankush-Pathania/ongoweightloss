@@ -231,7 +231,7 @@ body::before {
 .bg_big_text {
      color: #ffffff1a;
     pointer-events: none;
-    font-size: 18vw;
+    font-size: 10vw;
     font-weight: 900;
     position: absolute;
     bottom: 0;
