@@ -49,14 +49,14 @@ export default function BmiCalculator() {
           <div className="wl-image-grid">
             <div className="wl-image-card reveal">
               <img
-                src="assets/calc-a.png"
+                src="/assets/calc-a.png"
                 alt="Happy patient after weight loss"
                 className="wl-grid-image"
               />
             </div>
             <div className="wl-image-card reveal">
               <img
-                src="assets/calc-b.png"
+                src="/assets/calc-b.png"
                 alt="GLP-1 injection demonstration"
                 className="wl-grid-image"
               />

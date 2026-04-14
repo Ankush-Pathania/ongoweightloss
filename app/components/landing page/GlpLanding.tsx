@@ -26,14 +26,14 @@ export default function WeightLossSection() {
           <div className="wl-image-grid">
             <div className="wl-image-card reveal">
               <img
-                src="assets/glp-b.png"
+                src="/assets/glp-b.png"
                 alt="Happy patient after weight loss"
                 className="wl-grid-image"
               />
             </div>
             <div className="wl-image-card reveal">
               <img
-                src="assets/glp-a.png"
+                src="/assets/glp-a.png"
                 alt="GLP-1 injection demonstration"
                 className="wl-grid-image"
               />
@@ -57,7 +57,7 @@ export default function WeightLossSection() {
         <div className="wl-hero-left reveal">
           <div className="wl-product-image-wrap reveal">
             <img
-              src="assets/glp-c.png"
+              src="/assets/glp-c.png"
               alt="GLP-1 prescription medication"
               className="wl-product-image"
             />
